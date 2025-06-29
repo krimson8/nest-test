@@ -13,15 +13,15 @@ import { JwtModule } from '@nestjs/jwt';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true
-    }), 
-    AuthModule, 
-    UserModule, 
-    BookmarkModule, 
+      isGlobal: true,
+    }),
+    AuthModule,
+    UserModule,
+    BookmarkModule,
     PrismaModule,
-    JwtModule
+    JwtModule,
   ],
   controllers: [AppController, AuthController],
   providers: [AppService, AuthService],
 })
-export class AppModule { }
+export class AppModule {}
